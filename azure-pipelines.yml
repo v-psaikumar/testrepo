@@ -11,7 +11,7 @@ jobs:
 
  -  job: deploy1
     displayName: Run deployment1
-    Steps:
+    steps:
     - bash: echo "trigger pipeline1."
     
  -  job: publish_artifact
