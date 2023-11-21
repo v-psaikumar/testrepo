@@ -9,6 +9,11 @@ jobs:
     steps:
     - bash: echo "triggering deploy pipeline."
 
+ -  job: deploy1
+    displayName: Run deployment1
+    Steps:
+    - bash: echo "trigger pipeline1."
+    
  -  job: publish_artifact
     steps:
     - task: PublishPipelineArtifact@1
