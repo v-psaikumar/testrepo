@@ -1,0 +1,19 @@
+name: TestPipeline
+    
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+ -  job: deploy
+    displayName: Run deployment playbooks
+    steps:
+    - bash: echo "triggering deploy pipeline."
+
+ -  job: publish_artifact
+    steps:
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        publishLocation: 'pipeline'
+    dependsOn:
+        - deploy
