@@ -12,7 +12,7 @@ jobs:
  -  job: deploy1
     displayName: Run deployment1
     steps:
-    - bash: echo "trigger pipeline1."
+    - bash: echo "trigger pipeline 10."
     
  -  job: publish_artifact
     steps:
